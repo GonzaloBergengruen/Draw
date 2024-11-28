@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\Draw\\Draw\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\signatureview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\signatureview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "Draw\\Platforms\\Android\\AndroidManifest.xml",
-              "ToolTip": "D:\\Draw\\Draw\\Draw\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeToolTip": "Draw\\Platforms\\Android\\AndroidManifest.xml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-11-26T17:03:12.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SignatureView.cs",
-              "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\SignatureView.cs",
-              "RelativeDocumentMoniker": "Draw\\SignatureView.cs",
-              "ToolTip": "D:\\Draw\\Draw\\Draw\\SignatureView.cs",
-              "RelativeToolTip": "Draw\\SignatureView.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwBcAAAAlAAAAAAAAAA==",
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Draw\\MainPage.xaml.cs",
+              "ToolTip": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs",
+              "RelativeToolTip": "Draw\\MainPage.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:58:36.972Z",
+              "WhenOpened": "2024-11-28T18:11:22.71Z",
               "EditorCaption": ""
             }
           ]
