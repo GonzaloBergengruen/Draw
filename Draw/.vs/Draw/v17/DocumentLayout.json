@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\signatureview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\signatureview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|d:\\draw\\draw\\draw\\graphicsdrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16CDF476-B471-4D0D-827B-C43FD0380751}|Draw\\Draw.csproj|solutionrelative:draw\\graphicsdrawable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +22,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GraphicsDrawable.cs",
+              "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\GraphicsDrawable.cs",
+              "RelativeDocumentMoniker": "Draw\\GraphicsDrawable.cs",
+              "ToolTip": "D:\\Draw\\Draw\\Draw\\GraphicsDrawable.cs",
+              "RelativeToolTip": "Draw\\GraphicsDrawable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:54:20.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignatureView.cs",
+              "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\SignatureView.cs",
+              "RelativeDocumentMoniker": "Draw\\SignatureView.cs",
+              "ToolTip": "D:\\Draw\\Draw\\Draw\\SignatureView.cs",
+              "RelativeToolTip": "Draw\\SignatureView.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:54:11.25Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +58,7 @@
               "RelativeDocumentMoniker": "Draw\\MainPage.xaml.cs",
               "ToolTip": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs",
               "RelativeToolTip": "Draw\\MainPage.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwIsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKEAAAAAAAAAAAAzwPUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T18:11:22.71Z",
               "EditorCaption": ""

@@ -5,6 +5,8 @@
         public List<PointF> CurrentLine { get; set; } = new List<PointF>();
         public List<List<PointF>> Lines { get; set; } = new List<List<PointF>>();
 
+        public bool ShowArrowAndText { get; set; } = true;
+
         public void Draw(ICanvas canvas, RectF dirtyRect)
         {
             // Dibujar el fondo
@@ -45,6 +47,36 @@
                 canvas.StrokeSize = 2;
                 canvas.DrawPath(path);
             }
+
+            if (ShowArrowAndText)
+            {
+                DrawArrowWithText(canvas, dirtyRect);
+            }
+        }
+
+        private void DrawArrowWithText(ICanvas canvas, RectF dirtyRect)
+        {
+            float centerX = dirtyRect.Center.X;
+            float bottomY = dirtyRect.Bottom - 20;
+            float topY = dirtyRect.Top + 20;
+
+            // Dibujar línea de la flecha
+            canvas.StrokeColor = Colors.Black;
+            canvas.StrokeSize = 3;
+            canvas.DrawLine(centerX, bottomY, centerX, topY);
+
+            // Dibujar la punta de la flecha
+            canvas.DrawLine(centerX, topY, centerX - 10, topY + 20);
+            canvas.DrawLine(centerX, topY, centerX + 10, topY + 20);
+
+            // Dibujar el texto perpendicular a la flecha
+            canvas.SaveState();
+            canvas.Translate(centerX - 20, (bottomY + topY) / 2);
+            canvas.Rotate(-90); // Rotar el texto para que sea perpendicular
+            canvas.FontColor = Colors.Black;
+            canvas.FontSize = 18;
+            canvas.DrawString("Escriba en esta dirección", 0, 0, HorizontalAlignment.Center);
+            canvas.RestoreState();
         }
     }
 

@@ -17,6 +17,7 @@ namespace Draw
 
         private void SignatureView_StartInteraction(object sender, TouchEventArgs e)
         {
+            graphicsDrawable.ShowArrowAndText = false;
             graphicsDrawable.CurrentLine = new List<PointF> { e.Touches[0] };
             this.Invalidate();
         }

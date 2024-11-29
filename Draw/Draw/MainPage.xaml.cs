@@ -75,6 +75,7 @@ namespace Draw
             {
                 drawable.Lines.Clear();
                 drawable.CurrentLine.Clear();
+                drawable.ShowArrowAndText = true;
                 SignatureCanvas.Invalidate();
             }
         }
@@ -229,6 +230,20 @@ namespace Draw
             });
         }
 
+        private void OnClearCanvasClicked(object sender, EventArgs e)
+        {
+            var drawable = (SignatureCanvas.Drawable as GraphicsDrawable);
+            if (drawable != null)
+            {
+                drawable.Lines.Clear();
+                drawable.CurrentLine.Clear();
+
+                // Mostrar la flecha y el texto al borrar
+                drawable.ShowArrowAndText = true;
+
+                SignatureCanvas.Invalidate();
+            }
+        }
     }
 }
 #endif
