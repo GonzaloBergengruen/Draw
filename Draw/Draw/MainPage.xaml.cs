@@ -147,6 +147,7 @@ namespace Draw
 using UIKit;
 using CoreGraphics;
 using Photos;
+using Foundation;
 
 namespace Draw
 {
