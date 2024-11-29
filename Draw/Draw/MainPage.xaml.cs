@@ -1,6 +1,7 @@
 ﻿#if ANDROID
 using Android.Content;
 using Microsoft.Maui.Graphics.Platform;
+using SkiaSharp;
 
 namespace Draw
 {
@@ -136,6 +137,95 @@ namespace Draw
             rotatedBitmap.Compress(Android.Graphics.Bitmap.CompressFormat.Png, 100, stream);
 
             return stream.ToArray();
+        }
+
+    }
+}
+
+#elif IOS
+
+using UIKit;
+using CoreGraphics;
+using Photos;
+
+namespace Draw
+{
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private async void OnSaveImageClicked(object sender, EventArgs e)
+        {
+            try
+            {
+                int width = 500; // Ancho de la imagen
+                int height = 500; // Alto de la imagen
+
+                var imageData = (SignatureCanvas as SignatureView)?.ExportAsImage(width, height);
+
+                if (imageData != null)
+                {
+                    // Rotar la imagen 90 grados en iOS
+                    var rotatedImageData = RotateImage(imageData, 90);
+
+                    // Guardar la imagen en Fotos usando Photo Library
+                    await SaveImageToPhotosAsync(rotatedImageData);
+
+                    await DisplayAlert("Éxito", "Imagen guardada en Fotos.", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", "No se pudo capturar el canvas.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", $"No se pudo guardar la imagen: {ex.Message}", "OK");
+            }
+        }
+
+        private byte[] RotateImage(byte[] imageData, float angle)
+        {
+            using var originalImage = UIImage.LoadFromData(NSData.FromArray(imageData));
+
+            UIGraphics.BeginImageContext(new CGSize(originalImage.Size.Height, originalImage.Size.Width));
+            var context = UIGraphics.GetCurrentContext();
+
+            // Transforma el contexto para rotar la imagen
+            context.TranslateCTM(originalImage.Size.Width / 2, originalImage.Size.Height / 2);
+            context.RotateCTM((float)(angle * Math.PI / 180));
+            context.TranslateCTM(-originalImage.Size.Height / 2, -originalImage.Size.Width / 2);
+
+            originalImage.Draw(new CGRect(0, 0, originalImage.Size.Width, originalImage.Size.Height));
+            var rotatedImage = UIGraphics.GetImageFromCurrentImageContext();
+
+            UIGraphics.EndImageContext();
+
+            return rotatedImage.AsPNG().ToArray();
+        }
+
+        private async Task SaveImageToPhotosAsync(byte[] imageData)
+        {
+            var imageDataNs = NSData.FromArray(imageData);
+
+            await Task.Run(() =>
+            {
+                PHPhotoLibrary.SharedPhotoLibrary.PerformChanges(() =>
+                {
+                    var creationRequest = PHAssetCreationRequest.CreationRequestForAsset();
+                    creationRequest.AddResource(PHAssetResourceType.Photo, imageDataNs, new PHAssetResourceCreationOptions());
+                },
+                (success, error) =>
+                {
+                    if (!success)
+                    {
+                        Console.WriteLine($"Error al guardar la imagen: {error?.LocalizedDescription ?? "Error desconocido"}");
+                    }
+                });
+            });
         }
 
     }
