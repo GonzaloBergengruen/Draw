@@ -17,7 +17,7 @@ namespace Draw
 
         private void SignatureView_StartInteraction(object sender, TouchEventArgs e)
         {
-            graphicsDrawable.ShowArrowAndText = false;
+            graphicsDrawable.ShowArrowAndText = false;  //Oculta la felcha y el texto
             graphicsDrawable.CurrentLine = new List<PointF> { e.Touches[0] };
             this.Invalidate();
         }
@@ -78,5 +78,4 @@ namespace Draw
             return data.ToArray();
         }
     }
-
 }

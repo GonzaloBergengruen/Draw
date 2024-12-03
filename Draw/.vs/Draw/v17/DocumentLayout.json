@@ -22,8 +22,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -34,8 +46,7 @@
               "RelativeToolTip": "Draw\\GraphicsDrawable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:54:20.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:54:20.698Z"
             },
             {
               "$type": "Document",
@@ -47,8 +58,7 @@
               "RelativeToolTip": "Draw\\SignatureView.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAgwBMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:54:11.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:54:11.25Z"
             },
             {
               "$type": "Document",
@@ -56,9 +66,9 @@
               "Title": "MainPage.xaml.cs",
               "DocumentMoniker": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs",
               "RelativeDocumentMoniker": "Draw\\MainPage.xaml.cs",
-              "ToolTip": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs",
-              "RelativeToolTip": "Draw\\MainPage.xaml.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAzwPUAAAAJAAAAAAAAAA==",
+              "ToolTip": "D:\\Draw\\Draw\\Draw\\MainPage.xaml.cs*",
+              "RelativeToolTip": "Draw\\MainPage.xaml.cs*",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGMAAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T18:11:22.71Z",
               "EditorCaption": ""

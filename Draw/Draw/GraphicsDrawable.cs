@@ -48,6 +48,7 @@
                 canvas.DrawPath(path);
             }
 
+            //Muestra la flecha y el texto
             if (ShowArrowAndText)
             {
                 DrawArrowWithText(canvas, dirtyRect);
@@ -79,5 +80,4 @@
             canvas.RestoreState();
         }
     }
-
 }

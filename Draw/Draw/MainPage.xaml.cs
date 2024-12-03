@@ -80,12 +80,14 @@ namespace Draw
             }
         }
 
+        //Pide permiso para guardar imagenes en el dispositivo
         private async Task<bool> CheckAndRequestStoragePermissionAsync()
         {
             var status = await Permissions.RequestAsync<Permissions.StorageWrite>();
             return status == PermissionStatus.Granted;
         }
 
+        //Guarda la imagen en el dispositivo
         private async Task SaveImageToPicturesFolderAsync(byte[] imageData)
         {
             try
@@ -95,7 +97,7 @@ namespace Draw
                 var values = new ContentValues();
                 values.Put(Android.Provider.MediaStore.Images.Media.InterfaceConsts.DisplayName, $"signature_{DateTime.Now:yyyyMMdd_HHmmss}.png");
                 values.Put(Android.Provider.MediaStore.Images.Media.InterfaceConsts.MimeType, "image/png");
-                values.Put(Android.Provider.MediaStore.Images.Media.InterfaceConsts.RelativePath, "Pictures/Signatures");
+                values.Put(Android.Provider.MediaStore.Images.Media.InterfaceConsts.RelativePath, "Pictures/Signatures");   //Carpeta donde la imagen es guardada
 
                 var uri = resolver.Insert(Android.Provider.MediaStore.Images.Media.ExternalContentUri, values);
 
@@ -139,7 +141,6 @@ namespace Draw
 
             return stream.ToArray();
         }
-
     }
 }
 
@@ -209,6 +210,7 @@ namespace Draw
             return rotatedImage.AsPNG().ToArray();
         }
 
+        //Guarda la imagen
         private async Task SaveImageToPhotosAsync(byte[] imageData)
         {
             var imageDataNs = NSData.FromArray(imageData);
